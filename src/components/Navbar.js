@@ -14,7 +14,7 @@ const Navbar = () => {
       </Link>
 
       <div>
-        <Link href="/play">
+        <Link href="/jeopardy">
           <StyledButton title="play jeopardy" />
         </Link>
         <Link href="/about">
