@@ -92,8 +92,8 @@ export const questionDataSetOne = [
       {
         value: 800,
         question:
-          "What do we call the practice of using different DeFi protocols together to earn rewards and optimize returns in the blockchain space?",
-        answer: "What is yield farming?",
+          "What term is used to describe a type of cryptocurrency that is designed to maintain a stable value by being pegged to a reserve asset such as fiat currency, gold, or another reference point?",
+        answer: "What is a stablecoin?",
       },
       {
         value: 1000,
@@ -146,34 +146,34 @@ export const questionDataSetTwo = [
     questions: [
       {
         value: 200,
-        question:
-          "This is the process by which new Ether tokens are created on the Ethereum network.",
-        answer: "What is mining or minting?",
+        question: "What are two common L1 blockchains.",
+        answer: "Ethereum, Polkadot, Bitcoin, Solana, Algorand, Cosmos, NEAR?",
       },
       {
         value: 400,
+        question:
+          "Name one of the entities/organizations that plays a major role in Ethereum updates and governance.",
+        answer:
+          "Ethereum Foundation, Ethereum Core Developers, Ethereum Improvement Proposal (EIP) Authors, Ethereum Community",
+      },
+      {
+        value: 600,
         question:
           "This term refers to the maximum amount of gas you're willing to spend on a transaction on Ethereum.",
         answer: "What is gas limit?",
       },
 
       {
-        value: 600,
+        value: 800,
         question:
           "These are the Ethereum network's test versions, used for testing before deploying on the main network.",
         answer: "What are testnets (like Ropsten, Kovan, Rinkeby)?",
       },
       {
-        value: 800,
+        value: 1000,
         question:
           "This is the name given to the first live release of Ethereum.",
         answer: "What is Frontier?",
-      },
-      {
-        value: 1000,
-        question:
-          "This Ethereum update, also known as EIP-1559, changed the fee market mechanism for Ethereum transactions.",
-        answer: "What is London Hard Fork?",
       },
     ],
   },
@@ -189,14 +189,14 @@ export const questionDataSetTwo = [
       {
         value: 400,
         question:
-          "This term describes a blockchain that can execute arbitrary complex operations, not limited to simple transactions.",
-        answer: "What is a Turing-complete blockchain?",
+          "What is the name of the largest peer-to-peer marketplace for crypto collectibles and non-fungible tokens (NFTs), which includes digital art, virtual worlds, sports, and censorship-resistant domain names?",
+        answer: "What is OpenSea?",
       },
       {
         value: 600,
         question:
-          "This is the native cryptocurrency of the Binance Smart Chain.",
-        answer: "What is Binance Coin (BNB)?",
+          "Which blockchain network is known for its pure proof-of-stake protocol that promises full participation, protection, and speed within a truly decentralized network, and was founded by cryptography pioneer Silvio Micali?",
+        answer: "What is Algorand?",
       },
       {
         value: 800,
@@ -252,9 +252,8 @@ export const questionDataSetTwo = [
     questions: [
       {
         value: 200,
-        question:
-          "This is a co-founder of Ripple and was one of the original architects of the XRP Ledger.",
-        answer: "Who is Jed McCaleb?",
+        question: "Name one of the original architects of the XRP Ledger.",
+        answer: "Who is Jed McCaleb, Arthur Britto, or David Schwartz?",
       },
       {
         value: 400,
@@ -291,32 +290,32 @@ export const questionDataSetThree = [
       {
         value: 200,
         question:
+          "What is the name of an alternate version of a given blockchain, used for testing prior to deployment?",
+        answer: "What is a testnet?",
+      },
+      {
+        value: 400,
+        question:
           "This is the process by which new Ether tokens are created on the Ethereum network.",
         answer: "What is mining or minting?",
       },
       {
-        value: 400,
+        value: 600,
         question:
           "This term refers to the maximum amount of gas you're willing to spend on a transaction on Ethereum.",
         answer: "What is gas limit?",
       },
       {
-        value: 600,
-        question:
-          "This is the name given to the first live release of Ethereum.",
-        answer: "What is Frontier?",
-      },
-      {
         value: 800,
         question:
-          "These are the Ethereum network's test versions, used for testing before deploying on the main network.",
-        answer: "What are testnets (like Ropsten, Kovan, Rinkeby)?",
+          "What is the name of the data structure used in blockchain technology to summarize all the transactions in a block by producing a digital fingerprint of the entire set of transactions?",
+        answer: "What is a merkle tree?",
       },
       {
         value: 1000,
         question:
-          "This Ethereum update, also known as EIP-1559, changed the fee market mechanism for Ethereum transactions.",
-        answer: "What is London Hard Fork?",
+          "Name one of Ethereum network's testnets, used for testing before deploying on the main network.",
+        answer: "What is Ropsten, Kovan, or Rinkeby?",
       },
     ],
   },
@@ -326,9 +325,10 @@ export const questionDataSetThree = [
       {
         value: 200,
         question:
-          "This concept refers to the interoperable network of blockchain protocols and applications.",
-        answer: "What is the Interplanetary File System (IPFS)?",
+          "What is the name of the popular Ethereum wallet and browser extension that allows users to interact with decentralized applications (DApps) and manage their cryptocurrency holdings?",
+        answer: "What is MetaMask?",
       },
+
       {
         value: 400,
         question:
@@ -338,14 +338,14 @@ export const questionDataSetThree = [
       {
         value: 600,
         question:
-          "What is the name of the popular Ethereum wallet and browser extension that allows users to interact with decentralized applications (DApps) and manage their cryptocurrency holdings?",
-        answer: "What is MetaMask?",
+          "Identify a protocol that aims to connect different blockchains to enable the transfer of information and value",
+        answer: "What is polkadot or cosmos?",
       },
       {
         value: 800,
         question:
-          "This project is a decentralized oracle network that provides real-world data to blockchains.",
-        answer: "What is Chainlink?",
+          "What is the name of the decentralized protocol for indexing and querying data from blockchains, starting with Ethereum, that allows developers to build various APIs, known as subgraphs, used to efficiently retrieve data from the blockchain.",
+        answer: "What is the Graph?",
       },
       {
         value: 1000,

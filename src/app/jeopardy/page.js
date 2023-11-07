@@ -102,7 +102,7 @@ export const Jeopardy = () => {
           src={"/white-kubi-logo.png"}
           alt={"kubi logo"}
           height={100}
-          width={140}
+          width={138}
           style={styles.image}
         />
         <select onChange={handleSetChange} style={styles.selector}>
