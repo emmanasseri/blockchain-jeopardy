@@ -76,14 +76,17 @@ export const QuestionModal = ({ question, onClose, onAnswerReveal }) => {
     <div style={styles.modalOverlay}>
       <div style={styles.modalContent}>
         <button style={styles.closeButton} onClick={onClose}>
-          X
+          x
         </button>
-        <div className="question-text">{question.question}</div>
+        <div style={styles.questionText}>{question.question}</div>
         {isAnswerRevealed && (
-          <div className="answer-text">{question.answer}</div>
+          <div style={styles.answerText}>{question.answer}</div>
         )}
         {!isAnswerRevealed && (
-          <button className="reveal-answer-button" onClick={handleRevealAnswer}>
+          <button
+            style={styles.revealAnswerButton}
+            onClick={handleRevealAnswer}
+          >
             Reveal Answer
           </button>
         )}
@@ -98,6 +101,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh", // Takes the full height of the viewport
+    backgroundColor: "#020888",
   },
   categoryColumn: {
     display: "flex",
@@ -109,11 +113,18 @@ const styles = {
     marginBottom: "20px", // Space between title and questions
     fontWeight: "bold",
     fontSize: "1.5rem",
+    color: "white",
   },
   questionCell: {
     width: "100%", // Makes all buttons the same width
     marginBottom: "10px", // Space between buttons
     padding: "10px 0", // Some padding for aesthetics
+    backgroundColor: "#020888", // Match the background color with the board
+    color: "#E7B36B", // Set the text color to yellow
+    border: "1px solid white", // Add a yellow border
+    fontSize: "2rem",
+    fontWeight: "bold",
+    height: "80px",
   },
   modalOverlay: {
     position: "fixed",
@@ -133,6 +144,8 @@ const styles = {
     padding: "20px",
     borderRadius: "10px",
     position: "relative",
+    justifyContent: "center",
+    alignItems: "center",
   },
   closeButton: {
     position: "absolute",
@@ -144,8 +157,9 @@ const styles = {
     cursor: "pointer",
   },
   questionText: {
-    marginBottom: "20px",
+    marginBottom: "40px",
     color: "black",
+    marginRight: "20px",
   },
   answerText: {
     marginTop: "20px",
@@ -153,15 +167,14 @@ const styles = {
     color: "black",
   },
   revealAnswerButton: {
-    display: "block",
-    width: "100%",
     padding: "10px 20px",
     margin: "10px 0",
-    backgroundColor: "#007bff",
-    color: "black",
+    backgroundColor: "#020888",
+    color: "white",
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
+    fontSize: "1rem",
   },
 };
 
