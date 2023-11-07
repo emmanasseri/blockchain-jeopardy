@@ -138,6 +138,41 @@ export const questionDataSetOne = [
       },
     ],
   },
+  {
+    category: "Not Blockchain :/",
+    questions: [
+      {
+        value: 200,
+        question: "What building on KU's west campus houses I2S?",
+        answer: "Nichols Hall",
+      },
+
+      {
+        value: 400,
+        question:
+          "What is the full name of I2S (the research department KUBI falls under)?",
+        answer: "What is Institute for Information Sciences?",
+      },
+
+      {
+        value: 600,
+        question: "What is the tiny piece at the end of a shoelace called?",
+        answer: "What is an aglet?",
+      },
+
+      {
+        value: 800,
+        question:
+          "In what Washington small town is the Twilight franchise set?",
+        answer: "Forks",
+      },
+      {
+        value: 1000,
+        question: "Who was the first woman to win a Nobel Prize?",
+        answer: "Who is Marie Curie",
+      },
+    ],
+  },
 ];
 
 export const questionDataSetTwo = [
@@ -281,6 +316,41 @@ export const questionDataSetTwo = [
       },
     ],
   },
+  {
+    category: "Not Blockchain :/",
+    questions: [
+      {
+        value: 200,
+        question:
+          "Name one of the two faculty sponsors of KU Blockchain institute.",
+        answer: "Who are Perry Alexander and Jennifer Lohoefener?",
+      },
+
+      {
+        value: 400,
+        question:
+          "What is the name of the Italian family that governs the vampires in Twilight?",
+        answer: "What is the Vulturi?",
+      },
+
+      {
+        value: 600,
+        question: "Who is the current Dean of Engineering at KU?",
+        answer: "Who is Argin Agah?",
+      },
+
+      {
+        value: 800,
+        question: "Who was the second president of KU Blockchain Institute?",
+        answer: "Rhett Phillips",
+      },
+      {
+        value: 1000,
+        question: "Originally, Amazon only sold what kind of product?",
+        answer: "What are books?",
+      },
+    ],
+  },
 ];
 
 export const questionDataSetThree = [
@@ -421,6 +491,40 @@ export const questionDataSetThree = [
         question:
           "What is the name of the privacy-focused web browser that blocks ads and trackers by default while providing users with the option to support content creators through its cryptocurrency-based rewards system?",
         answer: "What is the brave browser?",
+      },
+    ],
+  },
+  {
+    category: "Not Blockchain :/",
+    questions: [
+      {
+        value: 200,
+        question: "What is the name of Google's parent company",
+        answer: "What is Alphabet?",
+      },
+
+      {
+        value: 400,
+        question:
+          "Which former KU blockchain exec started block talk and coffee?",
+        answer: "What is Payden Brunton?",
+      },
+
+      {
+        value: 600,
+        question: "Who was the first president of KU Blockchain Institute?",
+        answer: "What is Daniel Jones?",
+      },
+
+      {
+        value: 800,
+        question: "What is the prequel to Jujitsu Kaisen?",
+        answer: "What is Tokyo Metropolitan Curse Technical School?",
+      },
+      {
+        value: 1000,
+        question: "Originally, Amazon only sold what kind of product?",
+        answer: "What are books?",
       },
     ],
   },
