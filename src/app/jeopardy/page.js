@@ -1,6 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { questionDataSetOne, questionDataSetTwo } from "./questionData"; // The path might differ based on your file structure
+import {
+  questionDataSetOne,
+  questionDataSetTwo,
+  questionDataSetThree,
+} from "./questionData"; // The path might differ based on your file structure
 //import QuestionModal from "./QuestionModal"; // This is the modal component that you will create
 import Navbar from "@/components/Navbar";
 
@@ -26,6 +30,7 @@ export const Jeopardy = () => {
     // Map IDs for both question sets
     mapQuestionData(questionDataSetOne);
     mapQuestionData(questionDataSetTwo);
+    mapQuestionData(questionDataSetThree);
   }, []);
 
   const handleSetChange = (event) => {
@@ -36,6 +41,8 @@ export const Jeopardy = () => {
         break;
       case "setTwo":
         setCurrentQuestionData(questionDataSetTwo);
+      case "setThree":
+        setCurrentQuestionData(questionDataSetThree);
         break;
       // add more cases as needed for additional sets
     }
@@ -90,6 +97,7 @@ export const Jeopardy = () => {
       <select onChange={handleSetChange}>
         <option value="setOne">Question Set One</option>
         <option value="setTwo">Question Set Two</option>
+        <option value="setThree">Question Set Three</option>
         {/* Add more <option> elements for additional question sets */}
       </select>
       <div style={styles.jeopardyBoard}>
