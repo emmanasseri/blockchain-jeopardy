@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
   questionDataSetOne,
   questionDataSetTwo,
   questionDataSetThree,
-} from "./questionData"; // The path might differ based on your file structure
-//import QuestionModal from "./QuestionModal"; // This is the modal component that you will create
-import Navbar from "@/components/Navbar";
+} from "./questionData";
 
 export const Jeopardy = () => {
   const [currentQuestionData, setCurrentQuestionData] =
@@ -94,12 +94,25 @@ export const Jeopardy = () => {
 
   return (
     <>
-      <select onChange={handleSetChange}>
-        <option value="setOne">Question Set One</option>
-        <option value="setTwo">Question Set Two</option>
-        <option value="setThree">Question Set Three</option>
-        {/* Add more <option> elements for additional question sets */}
-      </select>
+      <div style={styles.header}>
+        <Link href="/" style={styles.buttonLink}>
+          About this project
+        </Link>
+        <Image
+          src={"/white-kubi-logo.png"}
+          alt={"kubi logo"}
+          height={100}
+          width={140}
+          style={styles.image}
+        />
+        <select onChange={handleSetChange} style={styles.selector}>
+          <option value="setOne">Question Set One</option>
+          <option value="setTwo">Question Set Two</option>
+          <option value="setThree">Question Set Three</option>
+          {/* Add more <option> elements for additional question sets */}
+        </select>
+      </div>
+
       <div style={styles.jeopardyBoard}>
         {currentQuestionData.map((category, index) => (
           <div key={index} style={styles.categoryColumn}>
@@ -162,6 +175,17 @@ export const QuestionModal = ({ question, onClose, onAnswerReveal }) => {
 };
 
 const styles = {
+  selector: {
+    backgroundColor: "#020888",
+    color: "white",
+    fontSize: "1rem",
+    border: "2px solid white",
+    borderRadius: "8px",
+    padding: "8px 16px",
+    color: "white",
+  },
+
+  image: { margin: "30px" },
   jeopardyBoard: {
     display: "flex",
     justifyContent: "center",
@@ -241,6 +265,29 @@ const styles = {
     borderRadius: "5px",
     cursor: "pointer",
     fontSize: "1rem",
+  },
+  buttonLink: {
+    display: "inline-block",
+    border: "2px solid white",
+    borderRadius: "8px",
+    padding: "8px 16px",
+    backgroundColor: "transparent",
+    color: "white",
+    cursor: "pointer",
+    textDecoration: "none",
+    outline: "none",
+    transition: "0.3s",
+    "&:hover": {
+      backgroundColor: "black",
+      color: "white",
+    },
+  },
+  header: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
+    backgroundColor: "#020888",
   },
 };
 
