@@ -1,22 +1,58 @@
 "use client";
-import React, { useState } from "react";
-import questionData from "./questionData"; // The path might differ based on your file structure
+import React, { useEffect, useState } from "react";
+import { questionDataSetOne, questionDataSetTwo } from "./questionData"; // The path might differ based on your file structure
 //import QuestionModal from "./QuestionModal"; // This is the modal component that you will create
 import Navbar from "@/components/Navbar";
 
-questionData.forEach((category, i) => {
-  category.questions.forEach((question, j) => {
-    // Ensure there is not already an ID assigned
-    if (!question.id) {
-      question.id = `q-${i}-${j}`; // Construct a unique ID for each question
-    }
-  });
-});
-
 export const Jeopardy = () => {
+  const [currentQuestionData, setCurrentQuestionData] =
+    useState(questionDataSetOne);
   const [selectedQuestion, setSelectedQuestion] = useState(null);
   const [answeredQuestions, setAnsweredQuestions] = useState(new Set()); // Set to track answered questions
   const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    // This will run only once when the component mounts
+    const mapQuestionData = (dataSet) => {
+      dataSet.forEach((category, i) => {
+        category.questions.forEach((question, j) => {
+          if (!question.id) {
+            // Ensure there is not already an ID assigned
+            question.id = `q-${i}-${j}`; // Construct a unique ID for each question
+          }
+        });
+      });
+    };
+
+    // Map IDs for both question sets
+    mapQuestionData(questionDataSetOne);
+    mapQuestionData(questionDataSetTwo);
+  }, []);
+
+  const handleSetChange = (event) => {
+    const selectedSet = event.target.value;
+    switch (selectedSet) {
+      case "setOne":
+        setCurrentQuestionData(questionDataSetOne);
+        break;
+      case "setTwo":
+        setCurrentQuestionData(questionDataSetTwo);
+        break;
+      // add more cases as needed for additional sets
+    }
+    setAnsweredQuestions(new Set()); // Optionally reset the answered questions
+    mapQuestionData(currentQuestionData);
+  };
+
+  const mapQuestionData = (dataSet) => {
+    dataSet.forEach((category, i) => {
+      category.questions.forEach((question, j) => {
+        // Ensure there is not already an ID assigned
+        if (!question.id) {
+          question.id = `q-${i}-${j}`; // Construct a unique ID for each question
+        }
+      });
+    });
+  };
 
   const openQuestionModal = (question) => {
     setSelectedQuestion(question);
@@ -31,21 +67,42 @@ export const Jeopardy = () => {
     setIsModalOpen(false);
     setSelectedQuestion(null); // Reset selected question when closing modal
   };
+  // This function will return the appropriate styles for a question cell
+  const getQuestionCellStyle = (questionId, answeredQuestions) => {
+    if (answeredQuestions.has(questionId)) {
+      // Style for answered question cells
+      return {
+        ...styles.questionCell, // Base styles
+        backgroundColor: "#020888", // Same as the board, you can adjust if needed
+        color: "#605a00", // Dark yellow color for answered questions
+        pointerEvents: "none", // Prevents clicking
+        opacity: 0.6, // Visual cue that it's disabled
+        textShadow: "0 0 8px rgba(0,0,0,0.5)", // Optional: adds a slight shadow to make the text appear blurred
+      };
+    }
+
+    // Style for unanswered question cells
+    return styles.questionCell;
+  };
 
   return (
     <>
-      <Navbar />
+      <select onChange={handleSetChange}>
+        <option value="setOne">Question Set One</option>
+        <option value="setTwo">Question Set Two</option>
+        {/* Add more <option> elements for additional question sets */}
+      </select>
       <div style={styles.jeopardyBoard}>
-        {questionData.map((category, index) => (
+        {currentQuestionData.map((category, index) => (
           <div key={index} style={styles.categoryColumn}>
             <div style={styles.categoryTitle}>{category.category}</div>
 
             {category.questions.map((question) => (
               <button
-                key={question.id} // Use unique ID for key
-                style={styles.questionCell}
+                key={question.id}
+                style={getQuestionCellStyle(question.id, answeredQuestions)}
                 onClick={() => openQuestionModal(question)}
-                disabled={answeredQuestions.has(question.id)} // Check if the unique ID is in the Set
+                disabled={answeredQuestions.has(question.id)}
               >
                 ${question.value}
               </button>
@@ -64,6 +121,7 @@ export const Jeopardy = () => {
     </>
   );
 };
+
 export const QuestionModal = ({ question, onClose, onAnswerReveal }) => {
   const [isAnswerRevealed, setIsAnswerRevealed] = useState(false);
 

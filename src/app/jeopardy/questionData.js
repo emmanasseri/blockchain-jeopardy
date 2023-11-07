@@ -1,4 +1,4 @@
-const questionData = [
+export const questionDataSetOne = [
   {
     category: "Ethereum Essentials",
     questions: [
@@ -141,4 +141,145 @@ const questionData = [
   },
 ];
 
-export default questionData;
+export const questionDataSetTwo = [
+  {
+    category: "Ethereum Essentials",
+    questions: [
+      {
+        value: 200,
+        question:
+          "This is the process by which new Ether tokens are created on the Ethereum network.",
+        answer: "What is mining or minting?",
+      },
+      {
+        value: 400,
+        question:
+          "This term refers to the maximum amount of gas you're willing to spend on a transaction on Ethereum.",
+        answer: "What is gas limit?",
+      },
+      {
+        value: 600,
+        question:
+          "This is the name given to the first live release of Ethereum.",
+        answer: "What is Frontier?",
+      },
+      {
+        value: 800,
+        question:
+          "These are the Ethereum network's test versions, used for testing before deploying on the main network.",
+        answer: "What are testnets (like Ropsten, Kovan, Rinkeby)?",
+      },
+      {
+        value: 1000,
+        question:
+          "This Ethereum update, also known as EIP-1559, changed the fee market mechanism for Ethereum transactions.",
+        answer: "What is London Hard Fork?",
+      },
+    ],
+  },
+  {
+    category: "Web3 Wonders",
+    questions: [
+      {
+        value: 200,
+        question:
+          "This concept refers to the interoperable network of blockchain protocols and applications.",
+        answer: "What is the Interplanetary File System (IPFS)?",
+      },
+      {
+        value: 400,
+        question:
+          "This term describes a blockchain that can execute arbitrary complex operations, not limited to simple transactions.",
+        answer: "What is a Turing-complete blockchain?",
+      },
+      {
+        value: 600,
+        question:
+          "This is the native cryptocurrency of the Binance Smart Chain.",
+        answer: "What is Binance Coin (BNB)?",
+      },
+      {
+        value: 800,
+        question:
+          "This project is a decentralized oracle network that provides real-world data to blockchains.",
+        answer: "What is Chainlink?",
+      },
+      {
+        value: 1000,
+        question:
+          "This type of blockchain is permissioned and often private, designed for enterprise use.",
+        answer: "What is a consortium blockchain?",
+      },
+    ],
+  },
+  {
+    category: "DeFi Dynamics",
+    questions: [
+      {
+        value: 200,
+        question:
+          "This mechanism is used by certain DeFi platforms to ensure liquidity in trading pairs.",
+        answer: "What is an Automated Market Maker (AMM)?",
+      },
+      {
+        value: 400,
+        question:
+          "This term refers to the percentage of assets that are staked in a DeFi protocol, providing security and operability.",
+        answer: "What is Total Value Locked (TVL)?",
+      },
+      {
+        value: 600,
+        question:
+          "A DeFi lending protocol that enables users to participate as depositors or borrowers in a decentralized market.",
+        answer: "What is MakerDAO?",
+      },
+      {
+        value: 800,
+        question:
+          "This concept refers to the combination of various DeFi protocols to optimize earnings.",
+        answer: "What is yield farming?",
+      },
+      {
+        value: 1000,
+        question:
+          "This is the act of taking advantage of differences in prices across exchanges.",
+        answer: "What is arbitrage?",
+      },
+    ],
+  },
+  {
+    category: "Blockchain Pioneers",
+    questions: [
+      {
+        value: 200,
+        question:
+          "This is a co-founder of Ripple and was one of the original architects of the XRP Ledger.",
+        answer: "Who is Jed McCaleb?",
+      },
+      {
+        value: 400,
+        question:
+          "This person is recognized for their pioneering work in smart contracts and is known as the 'Godfather of Smart Contracts'.",
+        answer: "Who is Nick Szabo?",
+      },
+      {
+        value: 600,
+        question:
+          "This person is known for creating Cardano and co-founding Ethereum.",
+        answer: "Who is Charles Hoskinson?",
+      },
+      {
+        value: 800,
+        question:
+          "This individual is the co-founder of Tezos, a blockchain network that adopts formal verification for security.",
+        answer: "Who is Arthur Breitman?",
+      },
+      {
+        value: 1000,
+        question:
+          "Known for his role in creating the JavaScript programming language, he has also contributed significantly to the development of the Brave browser and Basic Attention Token.",
+        answer: "Who is Brendan Eich?",
+      },
+    ],
+  },
+];

@@ -10,15 +10,12 @@ const Navbar = () => {
   return (
     <nav>
       <Link href="/">
-        <StyledButton title="home" />
+        <StyledButton title="About this Project" />
       </Link>
 
       <div>
         <Link href="/jeopardy">
-          <StyledButton title="play jeopardy" />
-        </Link>
-        <Link href="/about">
-          <StyledButton title="about this project" />
+          <StyledButton title="Play Jeopardy!" />
         </Link>
       </div>
     </nav>
