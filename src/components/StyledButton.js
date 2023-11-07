@@ -28,7 +28,7 @@ const styles = {
     borderRadius: "8px",
     padding: "8px 16px",
     backgroundColor: "transparent",
-    color: "white",
+    color: "black",
     cursor: "pointer",
     outline: "none",
     transition: "0.3s",
